@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 13 Dec 2022 15:59:58 GMT
+ * Generated on Tue, 13 Dec 2022 16:07:28 GMT
  */
 
 export const ColorFoundationPrimaryRedBorder = "#fdb7b2";
@@ -40,7 +40,7 @@ export const ColorStrokePressedStroke = "#4caef5";
 export const GridWebGrid = {"pattern":"columns","gutterSize":20,"alignment":"stretch","count":12,"offset":80};
 export const GridTabletGrid = {"pattern":"columns","gutterSize":20,"alignment":"stretch","count":5,"offset":80};
 export const GridMobileGrid = {"pattern":"columns","gutterSize":8,"alignment":"stretch","count":4,"offset":22};
-export const FontSizeFontSize100 = {"fontSize":48,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":64,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
+export const FontSize100 = {"fontSize":48,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":64,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontSizeFontSize90 = {"fontSize":40,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":52,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontSizeFontSize80 = {"fontSize":32,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":44,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontSizeFontSize70 = {"fontSize":28,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":30,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
@@ -71,17 +71,17 @@ export const FontFamilyFontSourceSemi = {"fontSize":32,"textDecoration":"none","
 export const FontFamilyFontSourceBlack = {"fontSize":32,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":900,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":44,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontButtonButton = {"fontSize":18,"textDecoration":"none","fontFamily":"Futura PT","fontWeight":700,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":28,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"uppercase"};
 export const FontBredcrumbBreadcrumb = {"fontSize":12,"textDecoration":"underline","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":20,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
-export const TypographySizeFontSize100FontSize = 48;
-export const TypographySizeFontSize100TextDecoration = "none";
-export const TypographySizeFontSize100FontFamily = "Source Sans Pro";
-export const TypographySizeFontSize100FontWeight = 400;
-export const TypographySizeFontSize100FontStyle = "normal";
-export const TypographySizeFontSize100FontStretch = "normal";
-export const TypographySizeFontSize100LetterSpacing = 0;
-export const TypographySizeFontSize100LineHeight = 64;
-export const TypographySizeFontSize100ParagraphIndent = 0;
-export const TypographySizeFontSize100ParagraphSpacing = 0;
-export const TypographySizeFontSize100TextCase = "none";
+export const TypographySize100FontSize = 48;
+export const TypographySize100TextDecoration = "none";
+export const TypographySize100FontFamily = "Source Sans Pro";
+export const TypographySize100FontWeight = 400;
+export const TypographySize100FontStyle = "normal";
+export const TypographySize100FontStretch = "normal";
+export const TypographySize100LetterSpacing = 0;
+export const TypographySize100LineHeight = 64;
+export const TypographySize100ParagraphIndent = 0;
+export const TypographySize100ParagraphSpacing = 0;
+export const TypographySize100TextCase = "none";
 export const TypographySizeFontSize90FontSize = 40;
 export const TypographySizeFontSize90TextDecoration = "none";
 export const TypographySizeFontSize90FontFamily = "Source Sans Pro";

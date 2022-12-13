@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 13 Dec 2022 15:59:58 GMT
+ * Generated on Tue, 13 Dec 2022 16:07:28 GMT
  */
 
 :root {
@@ -41,7 +41,7 @@
   --hs-grid-web-grid: [object Object];
   --hs-grid-tablet-grid: [object Object];
   --hs-grid-mobile-grid: [object Object];
-  --hs-font-size-font-size-100: [object Object];
+  --hs-font-size-100: [object Object];
   --hs-font-size-font-size-90: [object Object];
   --hs-font-size-font-size-80: [object Object];
   --hs-font-size-font-size-70: [object Object];
@@ -72,17 +72,17 @@
   --hs-font-family-font-source-black: [object Object];
   --hs-font-button-button: [object Object];
   --hs-font-bredcrumb-breadcrumb: [object Object];
-  --hs-typography-size-font-size-100-font-size: 48;
-  --hs-typography-size-font-size-100-text-decoration: none;
-  --hs-typography-size-font-size-100-font-family: Source Sans Pro;
-  --hs-typography-size-font-size-100-font-weight: 400;
-  --hs-typography-size-font-size-100-font-style: normal;
-  --hs-typography-size-font-size-100-font-stretch: normal;
-  --hs-typography-size-font-size-100-letter-spacing: 0;
-  --hs-typography-size-font-size-100-line-height: 64;
-  --hs-typography-size-font-size-100-paragraph-indent: 0;
-  --hs-typography-size-font-size-100-paragraph-spacing: 0;
-  --hs-typography-size-font-size-100-text-case: none;
+  --hs-typography-size-100-font-size: 48;
+  --hs-typography-size-100-text-decoration: none;
+  --hs-typography-size-100-font-family: Source Sans Pro;
+  --hs-typography-size-100-font-weight: 400;
+  --hs-typography-size-100-font-style: normal;
+  --hs-typography-size-100-font-stretch: normal;
+  --hs-typography-size-100-letter-spacing: 0;
+  --hs-typography-size-100-line-height: 64;
+  --hs-typography-size-100-paragraph-indent: 0;
+  --hs-typography-size-100-paragraph-spacing: 0;
+  --hs-typography-size-100-text-case: none;
   --hs-typography-size-font-size-90-font-size: 40;
   --hs-typography-size-font-size-90-text-decoration: none;
   --hs-typography-size-font-size-90-font-family: Source Sans Pro;
