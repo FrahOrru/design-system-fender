@@ -1,5 +1,6 @@
 import { Component, h, Prop } from '@stencil/core';
 import { css } from '@emotion/css';
+import { FontSize40 } from '../../design-tokens/js/variables';
 
 @Component({
   tag: 'hs-help-text',
@@ -30,7 +31,7 @@ export class HsHelpText {
         this.color = `var()`
         break;
       case "error":
-        this.color = `var()`
+        this.color = `green`
         break;  
       default: break;
     }
@@ -38,9 +39,10 @@ export class HsHelpText {
 
   render() {
     const styleName = css`
-    color: ${this.color}
-    `
-    
+    color: ${this.color};
+    font-size: ${FontSize40.fontSize}px;
+    `;
+
     return (
       <div class={styleName}>
         <img src={this.icons[0]} />

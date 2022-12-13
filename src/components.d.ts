@@ -22,16 +22,6 @@ export namespace Components {
     }
     interface HsGridColumn {
     }
-    interface HsHeader {
-        /**
-          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
-         */
-        "level": number;
-        /**
-          * Provides support for implementing horizontal alignment to the text contained in the header.
-         */
-        "textAlign": 'left' | 'right' | 'center';
-    }
     interface HsHelpText {
         "type": "success" | "warning" | "primary" | "error";
     }
@@ -72,12 +62,6 @@ declare global {
         prototype: HTMLHsGridColumnElement;
         new (): HTMLHsGridColumnElement;
     };
-    interface HTMLHsHeaderElement extends Components.HsHeader, HTMLStencilElement {
-    }
-    var HTMLHsHeaderElement: {
-        prototype: HTMLHsHeaderElement;
-        new (): HTMLHsHeaderElement;
-    };
     interface HTMLHsHelpTextElement extends Components.HsHelpText, HTMLStencilElement {
     }
     var HTMLHsHelpTextElement: {
@@ -101,7 +85,6 @@ declare global {
         "hs-flex": HTMLHsFlexElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
-        "hs-header": HTMLHsHeaderElement;
         "hs-help-text": HTMLHsHelpTextElement;
         "hs-radio-button": HTMLHsRadioButtonElement;
         "hs-radio-group": HTMLHsRadioGroupElement;
@@ -125,16 +108,6 @@ declare namespace LocalJSX {
     }
     interface HsGridColumn {
     }
-    interface HsHeader {
-        /**
-          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
-         */
-        "level"?: number;
-        /**
-          * Provides support for implementing horizontal alignment to the text contained in the header.
-         */
-        "textAlign"?: 'left' | 'right' | 'center';
-    }
     interface HsHelpText {
         "type"?: "success" | "warning" | "primary" | "error";
     }
@@ -150,7 +123,6 @@ declare namespace LocalJSX {
         "hs-flex": HsFlex;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
-        "hs-header": HsHeader;
         "hs-help-text": HsHelpText;
         "hs-radio-button": HsRadioButton;
         "hs-radio-group": HsRadioGroup;
@@ -164,7 +136,6 @@ declare module "@stencil/core" {
             "hs-flex": LocalJSX.HsFlex & JSXBase.HTMLAttributes<HTMLHsFlexElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
-            "hs-header": LocalJSX.HsHeader & JSXBase.HTMLAttributes<HTMLHsHeaderElement>;
             "hs-help-text": LocalJSX.HsHelpText & JSXBase.HTMLAttributes<HTMLHsHelpTextElement>;
             "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
             "hs-radio-group": LocalJSX.HsRadioGroup & JSXBase.HTMLAttributes<HTMLHsRadioGroupElement>;
