@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+input[type=radio] {
+  appearance: none;
+  display: block;
+  width: 0;
+}
+
+label {
+  display: block;
+  padding: .8em 1.2em;
+
+  background-color: darkgoldenrod;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+label:hover:not(.selected) {
+  text-decoration: underline;
+}
+
+label:hover,
+label.selected {
+  background-color: rgb(254, 192, 36);
+}

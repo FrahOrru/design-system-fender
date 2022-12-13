@@ -1,0 +1,6 @@
+:host {
+  display: block;
+
+  border-radius: 15px;
+  overflow: hidden;
+}

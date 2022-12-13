@@ -12,9 +12,10 @@ export namespace Components {
     }
     interface HsFlex {
         "direction": "row" | "column";
-        "spacing": "between" | "around" | "evenly" | number;
+        "gap": number;
+        "wrap": boolean;
         "xAlign": "center" | "start" | "end";
-        "yAlign": "center" | "start" | "end";
+        "yAlign": "center" | "start" | "end"| "space-between" | "space-around" | "space-evenly";
     }
     interface HsGrid {
         "columns": number;
@@ -30,6 +31,16 @@ export namespace Components {
           * Provides support for implementing horizontal alignment to the text contained in the header.
          */
         "textAlign": 'left' | 'right' | 'center';
+    }
+    interface HsHelpText {
+        "type": "success" | "warning" | "primary" | "error";
+    }
+    interface HsRadioButton {
+        "value": any;
+    }
+    interface HsRadioGroup {
+        "name": any;
+        "selected": any;
     }
 }
 export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
@@ -67,12 +78,33 @@ declare global {
         prototype: HTMLHsHeaderElement;
         new (): HTMLHsHeaderElement;
     };
+    interface HTMLHsHelpTextElement extends Components.HsHelpText, HTMLStencilElement {
+    }
+    var HTMLHsHelpTextElement: {
+        prototype: HTMLHsHelpTextElement;
+        new (): HTMLHsHelpTextElement;
+    };
+    interface HTMLHsRadioButtonElement extends Components.HsRadioButton, HTMLStencilElement {
+    }
+    var HTMLHsRadioButtonElement: {
+        prototype: HTMLHsRadioButtonElement;
+        new (): HTMLHsRadioButtonElement;
+    };
+    interface HTMLHsRadioGroupElement extends Components.HsRadioGroup, HTMLStencilElement {
+    }
+    var HTMLHsRadioGroupElement: {
+        prototype: HTMLHsRadioGroupElement;
+        new (): HTMLHsRadioGroupElement;
+    };
     interface HTMLElementTagNameMap {
         "hs-button": HTMLHsButtonElement;
         "hs-flex": HTMLHsFlexElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
         "hs-header": HTMLHsHeaderElement;
+        "hs-help-text": HTMLHsHelpTextElement;
+        "hs-radio-button": HTMLHsRadioButtonElement;
+        "hs-radio-group": HTMLHsRadioGroupElement;
     }
 }
 declare namespace LocalJSX {
@@ -83,9 +115,10 @@ declare namespace LocalJSX {
     }
     interface HsFlex {
         "direction"?: "row" | "column";
-        "spacing"?: "between" | "around" | "evenly" | number;
+        "gap"?: number;
+        "wrap"?: boolean;
         "xAlign"?: "center" | "start" | "end";
-        "yAlign"?: "center" | "start" | "end";
+        "yAlign"?: "center" | "start" | "end"| "space-between" | "space-around" | "space-evenly";
     }
     interface HsGrid {
         "columns"?: number;
@@ -102,12 +135,25 @@ declare namespace LocalJSX {
          */
         "textAlign"?: 'left' | 'right' | 'center';
     }
+    interface HsHelpText {
+        "type"?: "success" | "warning" | "primary" | "error";
+    }
+    interface HsRadioButton {
+        "value"?: any;
+    }
+    interface HsRadioGroup {
+        "name"?: any;
+        "selected"?: any;
+    }
     interface IntrinsicElements {
         "hs-button": HsButton;
         "hs-flex": HsFlex;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
         "hs-header": HsHeader;
+        "hs-help-text": HsHelpText;
+        "hs-radio-button": HsRadioButton;
+        "hs-radio-group": HsRadioGroup;
     }
 }
 export { LocalJSX as JSX };
@@ -119,6 +165,9 @@ declare module "@stencil/core" {
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
             "hs-header": LocalJSX.HsHeader & JSXBase.HTMLAttributes<HTMLHsHeaderElement>;
+            "hs-help-text": LocalJSX.HsHelpText & JSXBase.HTMLAttributes<HTMLHsHelpTextElement>;
+            "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
+            "hs-radio-group": LocalJSX.HsRadioGroup & JSXBase.HTMLAttributes<HTMLHsRadioGroupElement>;
         }
     }
 }

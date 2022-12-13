@@ -15,39 +15,21 @@ export class HsFlex {
   xAlign: "center" | "start" | "end" = "center";
 
   @Prop({ reflect: true })
-  yAlign: "center" | "start" | "end" = "center";
+  yAlign: "center" | "start" | "end"| "space-between" | "space-around" | "space-evenly" = "center";
 
   @Prop({ reflect: true })
-  spacing: "between" | "around" | "evenly" | number = 1;
+  gap: number = 0;
 
-  justify;
-
-  componentWillLoad() {
-    if(this.direction === "row") {
-      //justify-content based on yAlign
-      switch(this.spacing) {
-        case "between":
-          this.justify = "space-between";
-          break;
-        case "around": 
-          this.justify = "space-around";
-          break; 
-        case "evenly": 
-          this.justify = "space-evenly";
-          break;   
-      }
-    } else {
-      //align-items based on xAlign
-    }
-  }
+  @Prop({ reflect: true })
+  wrap: boolean;
 
   render() {
     const styles = css`
     display: flex;
     flex-direction: ${this.direction};
-    justify-content: ${this.direction === "row" ? typeof this.spacing != 'number' ? this.justify : this.yAlign : undefined};
-    align-items: ${this.direction !== "row" ? this.xAlign : undefined};
-    gap: ${typeof this.spacing != 'number' ? this.spacing + 'rem': undefined};
+    justify-content: ${this.yAlign};
+    align-items: ${this.xAlign};
+    gap: ${this.gap}rem;
   `;
 
     return (
