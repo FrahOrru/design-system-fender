@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 13 Dec 2022 15:31:03 GMT
+ * Generated on Tue, 13 Dec 2022 15:59:58 GMT
  */
 
 export const ColorFoundationPrimaryRedBorder = "#fdb7b2";
