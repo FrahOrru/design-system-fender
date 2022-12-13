@@ -14,6 +14,10 @@ export class HsHelpText {
 
   color;
 
+  icons = [
+    "https://img.icons8.com/material-outlined/24/F81605/high-priority.png"
+  ]
+
   componentWillLoad() {
     switch(this.type) {
       case "success":
@@ -39,6 +43,7 @@ export class HsHelpText {
     
     return (
       <div class={styleName}>
+        <img src={this.icons[0]} />
         <slot></slot>
       </div>
     );

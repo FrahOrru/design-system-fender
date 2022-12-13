@@ -14,7 +14,7 @@ export default {
     // This will create an `args.variant` binding for your component 
     type: {
       options: ["success", "warning", "primary", "error"],        // Value presets
-      control: { type: 'string' },          // Knob type. It can be select, radio, etc
+      control: { type: 'select' },          // Knob type. It can be select, radio, etc
       description: 'define the type of the help text',    // The description text displayed in the knobs table
     },
   }
