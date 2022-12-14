@@ -11,7 +11,7 @@ export default {
       defaultValue: 'Submit',
     },
     variant: {
-      options: ['neutral', 'error'],
+      options: ["primary", "payment", "pill", "text" ],
       control: { type: 'select' },
       description: 'The button variant',
     },
@@ -19,6 +19,11 @@ export default {
       options: ['medium', 'small', 'large'],
       control: { type: 'radio' },
       description: 'The button size'
+    },
+    disabled: {
+      options: ['true', 'false'],
+      control: { type: 'boolean' },
+      description: 'Button state'
     },
   }
 };
@@ -28,7 +33,7 @@ export default {
  * can later on customize with different values for its attribute properties and events
  */
 const Template = (args) => `
-  <hs-button variant="${args.variant}" size="${args.size}">
+  <hs-button variant="${args.variant}" size="${args.size}" disabled="${args.disabled}">
     ${args.text}
   </hs-button>
 `;
@@ -43,14 +48,29 @@ const Template = (args) => `
 export const Button = Template.bind({});
 Button.args = {
   text: 'Button',
-  variant: 'neutral',
+  variant: 'primary',
   size: 'medium',
+  disabled: true
 };
 
-export const RedButton = Template.bind({});
-RedButton.args = {
+export const paymentButton = Template.bind({});
+paymentButton.args = {
   text: 'Button',
-  variant: 'error',
+  variant: 'payment',
   size: 'medium',
 };
 
+
+export const pillButton = Template.bind({});
+pillButton.args = {
+  text: 'Button',
+  variant: 'pill',
+  size: 'medium',
+};
+
+export const textButton = Template.bind({});
+textButton.args = {
+  text: 'Button',
+  variant: 'text',
+  size: 'medium',
+};

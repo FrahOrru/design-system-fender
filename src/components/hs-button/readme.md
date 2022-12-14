@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type     | Default     |
-| --------- | --------- | ----------- | -------- | ----------- |
-| `size`    | `size`    |             | `string` | `"medium"`  |
-| `variant` | `variant` |             | `string` | `"neutral"` |
+| Property   | Attribute  | Description | Type                                         | Default     |
+| ---------- | ---------- | ----------- | -------------------------------------------- | ----------- |
+| `disabled` | `disabled` |             | `boolean`                                    | `false`     |
+| `size`     | `size`     |             | `string`                                     | `"medium"`  |
+| `variant`  | `variant`  |             | `"payment" \| "pill" \| "primary" \| "text"` | `"primary"` |
 
 
 ## Events

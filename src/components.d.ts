@@ -7,8 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface HsButton {
+        "disabled": boolean;
         "size": string;
-        "variant": string;
+        "variant": "primary" | "payment" | "pill" | "text";
     }
     interface HsFlex {
         "direction": "row" | "column";
@@ -31,6 +32,8 @@ export namespace Components {
     interface HsRadioGroup {
         "name": any;
         "selected": any;
+    }
+    interface HsStack {
     }
 }
 export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
@@ -80,6 +83,12 @@ declare global {
         prototype: HTMLHsRadioGroupElement;
         new (): HTMLHsRadioGroupElement;
     };
+    interface HTMLHsStackElement extends Components.HsStack, HTMLStencilElement {
+    }
+    var HTMLHsStackElement: {
+        prototype: HTMLHsStackElement;
+        new (): HTMLHsStackElement;
+    };
     interface HTMLElementTagNameMap {
         "hs-button": HTMLHsButtonElement;
         "hs-flex": HTMLHsFlexElement;
@@ -88,13 +97,15 @@ declare global {
         "hs-help-text": HTMLHsHelpTextElement;
         "hs-radio-button": HTMLHsRadioButtonElement;
         "hs-radio-group": HTMLHsRadioGroupElement;
+        "hs-stack": HTMLHsStackElement;
     }
 }
 declare namespace LocalJSX {
     interface HsButton {
+        "disabled"?: boolean;
         "onClicked"?: (event: HsButtonCustomEvent<any>) => void;
         "size"?: string;
-        "variant"?: string;
+        "variant"?: "primary" | "payment" | "pill" | "text";
     }
     interface HsFlex {
         "direction"?: "row" | "column";
@@ -118,6 +129,8 @@ declare namespace LocalJSX {
         "name"?: any;
         "selected"?: any;
     }
+    interface HsStack {
+    }
     interface IntrinsicElements {
         "hs-button": HsButton;
         "hs-flex": HsFlex;
@@ -126,6 +139,7 @@ declare namespace LocalJSX {
         "hs-help-text": HsHelpText;
         "hs-radio-button": HsRadioButton;
         "hs-radio-group": HsRadioGroup;
+        "hs-stack": HsStack;
     }
 }
 export { LocalJSX as JSX };
@@ -139,6 +153,7 @@ declare module "@stencil/core" {
             "hs-help-text": LocalJSX.HsHelpText & JSXBase.HTMLAttributes<HTMLHsHelpTextElement>;
             "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
             "hs-radio-group": LocalJSX.HsRadioGroup & JSXBase.HTMLAttributes<HTMLHsRadioGroupElement>;
+            "hs-stack": LocalJSX.HsStack & JSXBase.HTMLAttributes<HTMLHsStackElement>;
         }
     }
 }

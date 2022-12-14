@@ -1,5 +1,6 @@
 import { defineCustomElements } from '../loader';
-
+import '../src/design-tokens/css/_variables.css';
+import '../src/global.css'
 defineCustomElements();
 
 export const parameters = {
