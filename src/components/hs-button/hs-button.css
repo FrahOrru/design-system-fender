@@ -114,5 +114,6 @@ button.pill::before {
 
 button.text {
   background-color: transparent;
-  color: var(--hs-color-foundation-background-dark-normal-hover)
+  color: var(--hs-color-foundation-background-dark-normal-hover);
+  position: relative;
 }

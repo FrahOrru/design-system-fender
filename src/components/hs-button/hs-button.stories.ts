@@ -50,7 +50,7 @@ Button.args = {
   text: 'Button',
   variant: 'primary',
   size: 'medium',
-  disabled: true
+  disabled: false
 };
 
 export const paymentButton = Template.bind({});
@@ -58,6 +58,7 @@ paymentButton.args = {
   text: 'Button',
   variant: 'payment',
   size: 'medium',
+  disabled: false
 };
 
 
@@ -66,6 +67,7 @@ pillButton.args = {
   text: 'Button',
   variant: 'pill',
   size: 'medium',
+  disabled: false
 };
 
 export const textButton = Template.bind({});
@@ -73,4 +75,5 @@ textButton.args = {
   text: 'Button',
   variant: 'text',
   size: 'medium',
+  disabled: false
 };

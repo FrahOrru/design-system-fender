@@ -6,6 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface HsBreadcrumb {
+    }
+    interface HsBreadcrumbItem {
+        "src": any;
+    }
     interface HsButton {
         "disabled": boolean;
         "size": string;
@@ -34,6 +39,10 @@ export namespace Components {
         "selected": any;
     }
     interface HsStack {
+        "gap": 'large' | 'small';
+        "orientation": "vertical" | "horizontal";
+    }
+    interface HsTextInput {
     }
 }
 export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
@@ -41,6 +50,18 @@ export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLHsButtonElement;
 }
 declare global {
+    interface HTMLHsBreadcrumbElement extends Components.HsBreadcrumb, HTMLStencilElement {
+    }
+    var HTMLHsBreadcrumbElement: {
+        prototype: HTMLHsBreadcrumbElement;
+        new (): HTMLHsBreadcrumbElement;
+    };
+    interface HTMLHsBreadcrumbItemElement extends Components.HsBreadcrumbItem, HTMLStencilElement {
+    }
+    var HTMLHsBreadcrumbItemElement: {
+        prototype: HTMLHsBreadcrumbItemElement;
+        new (): HTMLHsBreadcrumbItemElement;
+    };
     interface HTMLHsButtonElement extends Components.HsButton, HTMLStencilElement {
     }
     var HTMLHsButtonElement: {
@@ -89,7 +110,15 @@ declare global {
         prototype: HTMLHsStackElement;
         new (): HTMLHsStackElement;
     };
+    interface HTMLHsTextInputElement extends Components.HsTextInput, HTMLStencilElement {
+    }
+    var HTMLHsTextInputElement: {
+        prototype: HTMLHsTextInputElement;
+        new (): HTMLHsTextInputElement;
+    };
     interface HTMLElementTagNameMap {
+        "hs-breadcrumb": HTMLHsBreadcrumbElement;
+        "hs-breadcrumb-item": HTMLHsBreadcrumbItemElement;
         "hs-button": HTMLHsButtonElement;
         "hs-flex": HTMLHsFlexElement;
         "hs-grid": HTMLHsGridElement;
@@ -98,9 +127,15 @@ declare global {
         "hs-radio-button": HTMLHsRadioButtonElement;
         "hs-radio-group": HTMLHsRadioGroupElement;
         "hs-stack": HTMLHsStackElement;
+        "hs-text-input": HTMLHsTextInputElement;
     }
 }
 declare namespace LocalJSX {
+    interface HsBreadcrumb {
+    }
+    interface HsBreadcrumbItem {
+        "src"?: any;
+    }
     interface HsButton {
         "disabled"?: boolean;
         "onClicked"?: (event: HsButtonCustomEvent<any>) => void;
@@ -130,8 +165,14 @@ declare namespace LocalJSX {
         "selected"?: any;
     }
     interface HsStack {
+        "gap"?: 'large' | 'small';
+        "orientation"?: "vertical" | "horizontal";
+    }
+    interface HsTextInput {
     }
     interface IntrinsicElements {
+        "hs-breadcrumb": HsBreadcrumb;
+        "hs-breadcrumb-item": HsBreadcrumbItem;
         "hs-button": HsButton;
         "hs-flex": HsFlex;
         "hs-grid": HsGrid;
@@ -140,12 +181,15 @@ declare namespace LocalJSX {
         "hs-radio-button": HsRadioButton;
         "hs-radio-group": HsRadioGroup;
         "hs-stack": HsStack;
+        "hs-text-input": HsTextInput;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "hs-breadcrumb": LocalJSX.HsBreadcrumb & JSXBase.HTMLAttributes<HTMLHsBreadcrumbElement>;
+            "hs-breadcrumb-item": LocalJSX.HsBreadcrumbItem & JSXBase.HTMLAttributes<HTMLHsBreadcrumbItemElement>;
             "hs-button": LocalJSX.HsButton & JSXBase.HTMLAttributes<HTMLHsButtonElement>;
             "hs-flex": LocalJSX.HsFlex & JSXBase.HTMLAttributes<HTMLHsFlexElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
@@ -154,6 +198,7 @@ declare module "@stencil/core" {
             "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
             "hs-radio-group": LocalJSX.HsRadioGroup & JSXBase.HTMLAttributes<HTMLHsRadioGroupElement>;
             "hs-stack": LocalJSX.HsStack & JSXBase.HTMLAttributes<HTMLHsStackElement>;
+            "hs-text-input": LocalJSX.HsTextInput & JSXBase.HTMLAttributes<HTMLHsTextInputElement>;
         }
     }
 }
