@@ -4,7 +4,8 @@ import { css } from '@emotion/css';
 @Component({
   tag: 'hs-stack',
   styleUrl: 'hs-stack.css',
-  shadow: true,
+  shadow: false,
+  scoped: true
 })
 export class HsStack {
 
@@ -14,14 +15,19 @@ export class HsStack {
   @Prop({reflect: true})
   gap: 'large' | 'small' = 'small';
 
-  render() {
-    const stackStyle = css`
-    gap: ${ this.gap === 'large' ? 30 : 10}px;
+  
+  componentWillLoad() {
+    console.log(this.orientation)
+  }
+
+  stackStyle = css`
     flex-direction: ${this.orientation === 'horizontal' ? 'row' : 'column'};
+    gap: ${ this.gap === 'large' ? 20 : 5}px;
   `;
 
+  render() {
     return (
-      <div class={stackStyle}>
+      <div class={this.stackStyle}>
         <slot></slot>
       </div>
     );

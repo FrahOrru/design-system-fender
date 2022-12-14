@@ -51,7 +51,11 @@ export class HsHelpText {
 
     return (
       <div class={styleName}>
-        <img src={this.icon} />
+        {
+          this.type !== "primary" ? 
+          <img src={this.icon} /> :
+          null
+        }
         <slot></slot>
       </div>
     );

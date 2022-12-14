@@ -1,3 +1,37 @@
-:host {
-  display: block;
+@import url('../../global.css');
+
+input {
+  width: 100%;
+  background: #FDFEFF;
+  border: 2px solid #000000;
+  padding: 14px;
+}
+
+label {
+  font-family: var(--hs-typography-size-30-font-family);
+  font-style: normal;
+  font-weight: var(--hs-typography-size-30-font-weight);
+  font-size: var(--hs-typography-size-30-font-size);
+  line-height: 100%;
+}
+
+input.disabled {
+  background-color: #E6E6E6;
+  border-color: var(--hs-color-foundation-type-disabled);
+}
+
+label.disabled {
+  color: var(--hs-color-foundation-type-disabled);
+}
+
+input.success {
+  border-color: var(--hs-color-foundation-success-normal);
+}
+
+input.warning {
+  border-color: var(--hs-color-foundation-warning-normal);
+}
+
+input.error {
+  border-color: var(--hs-color-foundation-primary-red-normal-hover);
 }

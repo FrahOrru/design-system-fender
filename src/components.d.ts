@@ -31,6 +31,8 @@ export namespace Components {
     interface HsHelpText {
         "type": "success" | "warning" | "primary" | "error";
     }
+    interface HsIcons {
+    }
     interface HsRadioButton {
         "value": any;
     }
@@ -43,6 +45,12 @@ export namespace Components {
         "orientation": "vertical" | "horizontal";
     }
     interface HsTextInput {
+        "disabled": boolean;
+        "helpText": boolean;
+        "helpTextContent": string;
+        "label": string;
+        "placeholder": string;
+        "type": "primary" | "success" | "warning" | "error";
     }
 }
 export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
@@ -92,6 +100,12 @@ declare global {
         prototype: HTMLHsHelpTextElement;
         new (): HTMLHsHelpTextElement;
     };
+    interface HTMLHsIconsElement extends Components.HsIcons, HTMLStencilElement {
+    }
+    var HTMLHsIconsElement: {
+        prototype: HTMLHsIconsElement;
+        new (): HTMLHsIconsElement;
+    };
     interface HTMLHsRadioButtonElement extends Components.HsRadioButton, HTMLStencilElement {
     }
     var HTMLHsRadioButtonElement: {
@@ -124,6 +138,7 @@ declare global {
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
         "hs-help-text": HTMLHsHelpTextElement;
+        "hs-icons": HTMLHsIconsElement;
         "hs-radio-button": HTMLHsRadioButtonElement;
         "hs-radio-group": HTMLHsRadioGroupElement;
         "hs-stack": HTMLHsStackElement;
@@ -157,6 +172,8 @@ declare namespace LocalJSX {
     interface HsHelpText {
         "type"?: "success" | "warning" | "primary" | "error";
     }
+    interface HsIcons {
+    }
     interface HsRadioButton {
         "value"?: any;
     }
@@ -169,6 +186,12 @@ declare namespace LocalJSX {
         "orientation"?: "vertical" | "horizontal";
     }
     interface HsTextInput {
+        "disabled"?: boolean;
+        "helpText"?: boolean;
+        "helpTextContent"?: string;
+        "label"?: string;
+        "placeholder"?: string;
+        "type"?: "primary" | "success" | "warning" | "error";
     }
     interface IntrinsicElements {
         "hs-breadcrumb": HsBreadcrumb;
@@ -178,6 +201,7 @@ declare namespace LocalJSX {
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
         "hs-help-text": HsHelpText;
+        "hs-icons": HsIcons;
         "hs-radio-button": HsRadioButton;
         "hs-radio-group": HsRadioGroup;
         "hs-stack": HsStack;
@@ -195,6 +219,7 @@ declare module "@stencil/core" {
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
             "hs-help-text": LocalJSX.HsHelpText & JSXBase.HTMLAttributes<HTMLHsHelpTextElement>;
+            "hs-icons": LocalJSX.HsIcons & JSXBase.HTMLAttributes<HTMLHsIconsElement>;
             "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
             "hs-radio-group": LocalJSX.HsRadioGroup & JSXBase.HTMLAttributes<HTMLHsRadioGroupElement>;
             "hs-stack": LocalJSX.HsStack & JSXBase.HTMLAttributes<HTMLHsStackElement>;
