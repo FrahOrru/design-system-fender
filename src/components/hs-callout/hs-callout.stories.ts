@@ -28,7 +28,7 @@ const Template = (args) => `
 <hs-callout type="${args.type}">
   <div>
     <hs-header level="4">Callout Title</hs-header>
-    <p>Callout Content</p>
+    <span>Callout Content</span>
   </div>
 </hs-callout>
 `;

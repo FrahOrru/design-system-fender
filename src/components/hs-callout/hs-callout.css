@@ -1,23 +1,23 @@
-div {
+.callout {
   max-width: 320px;
   max-height: 88px;
-  padding: 10px 40px;
+  padding: 20px 40px;
   margin: 10px;
 
   border-radius: 4px;
 }
 
-div.info {
+.info {
   background-color: var(--hs-color-foundation-info-normal);
   color: var(--hs-color-foundation-type-light);
 }
 
-div.warning {
+.warning {
   background-color: var(--hs-color-foundation-warning-normal);
   color: var(--hs-color-foundation-type-light);
 }
 
-div.success {
+.success {
   background-color: var(--hs-color-foundation-success-light);
   color: var(--hs-color-foundation-success-normal);
 }

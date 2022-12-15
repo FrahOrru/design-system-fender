@@ -34,13 +34,14 @@ export class HsCallout {
     }
   }
   render() {
+ 
     return (
-      <div class={`${this.type}`}>
+      <div class={`${this.type} callout`}>
         <hs-flex xAlign='center' yAlign='start' gap={2}>
           <img src={this.icon} /> 
           <slot></slot>
         </hs-flex>
-      </div>
+      </div>   
     );
   }
 
