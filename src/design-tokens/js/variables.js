@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 13 Dec 2022 16:47:10 GMT
+ * Generated on Thu, 15 Dec 2022 14:12:00 GMT
  */
 
 export const ColorFoundationPrimaryRedBorder = "#fdb7b2";
@@ -42,7 +42,7 @@ export const GridTabletGrid = {"pattern":"columns","gutterSize":20,"alignment":"
 export const GridMobileGrid = {"pattern":"columns","gutterSize":8,"alignment":"stretch","count":4,"offset":22};
 export const FontSize10 = {"fontSize":12,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":15,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontSize20 = {"fontSize":14,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":20,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
-export const FontSize30 = {"fontSize":16,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":24,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
+export const FontSize30 = {"fontSize":16,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":19,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontSize40 = {"fontSize":18,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":27,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontSize50 = {"fontSize":20,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":28,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontSize60 = {"fontSize":24,"textDecoration":"none","fontFamily":"Source Sans Pro","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":34,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
@@ -100,7 +100,7 @@ export const TypographySize30FontWeight = 400;
 export const TypographySize30FontStyle = "normal";
 export const TypographySize30FontStretch = "normal";
 export const TypographySize30LetterSpacing = 0;
-export const TypographySize30LineHeight = 24;
+export const TypographySize30LineHeight = 19;
 export const TypographySize30ParagraphIndent = 0;
 export const TypographySize30ParagraphSpacing = 0;
 export const TypographySize30TextCase = "none";
