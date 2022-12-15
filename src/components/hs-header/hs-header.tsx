@@ -85,11 +85,11 @@ export class HsHeader {
         case 2:
             this.fontSize = `${JsVariables.TypographyHeadersH2FontSize}px`;
         case 3:
-            this.fontSize = `${JsVariables.TypographyHeaders3FontSize}px`;
+            this.fontSize = `${JsVariables.TypographyHeadersH3FontSize}px`;
         case 4:
-            this.fontSize = `${JsVariables.TypographyHeaders4FontSize}px`;      
+            this.fontSize = `${JsVariables.TypographyHeadersH4FontSize}px`;      
         case 5:
-            this.fontSize = `${JsVariables.TypographyHeaders5FontSize}px`;      
+            this.fontSize = `${JsVariables.TypographyHeadersH5FontSize}px`;      
     }
   }
 

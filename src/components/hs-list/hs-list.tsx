@@ -1,4 +1,6 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
+import { css } from '@emotion/css';
+import * as JsVariables from '../../design-tokens/js/variables';
 
 @Component({
   tag: 'hs-list',
@@ -7,11 +9,21 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class HsList {
 
+  @Prop()
+  type: "unordered" | "ordered" = "unordered";
+
   render() {
+
+    const Tag = `${this.type === 'unordered' ? 'ul' : 'ol'}`;
+
+    const tagStyles = css`
+      text-size:${JsVariables.TypographySize60FontSize}px;
+    `;
+ 
     return (
-      <Host>
+      <Tag class={tagStyles}>
         <slot></slot>
-      </Host>
+      </Tag>
     );
   }
 

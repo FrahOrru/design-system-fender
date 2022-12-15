@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface HsBox {
+    }
     interface HsBreadcrumb {
     }
     interface HsBreadcrumbItem {
@@ -43,6 +45,9 @@ export namespace Components {
     }
     interface HsIcons {
     }
+    interface HsList {
+        "type": "unordered" | "ordered";
+    }
     interface HsRadioButton {
         "value": any;
     }
@@ -68,6 +73,12 @@ export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLHsButtonElement;
 }
 declare global {
+    interface HTMLHsBoxElement extends Components.HsBox, HTMLStencilElement {
+    }
+    var HTMLHsBoxElement: {
+        prototype: HTMLHsBoxElement;
+        new (): HTMLHsBoxElement;
+    };
     interface HTMLHsBreadcrumbElement extends Components.HsBreadcrumb, HTMLStencilElement {
     }
     var HTMLHsBreadcrumbElement: {
@@ -122,6 +133,12 @@ declare global {
         prototype: HTMLHsIconsElement;
         new (): HTMLHsIconsElement;
     };
+    interface HTMLHsListElement extends Components.HsList, HTMLStencilElement {
+    }
+    var HTMLHsListElement: {
+        prototype: HTMLHsListElement;
+        new (): HTMLHsListElement;
+    };
     interface HTMLHsRadioButtonElement extends Components.HsRadioButton, HTMLStencilElement {
     }
     var HTMLHsRadioButtonElement: {
@@ -147,6 +164,7 @@ declare global {
         new (): HTMLHsTextInputElement;
     };
     interface HTMLElementTagNameMap {
+        "hs-box": HTMLHsBoxElement;
         "hs-breadcrumb": HTMLHsBreadcrumbElement;
         "hs-breadcrumb-item": HTMLHsBreadcrumbItemElement;
         "hs-button": HTMLHsButtonElement;
@@ -156,6 +174,7 @@ declare global {
         "hs-header": HTMLHsHeaderElement;
         "hs-help-text": HTMLHsHelpTextElement;
         "hs-icons": HTMLHsIconsElement;
+        "hs-list": HTMLHsListElement;
         "hs-radio-button": HTMLHsRadioButtonElement;
         "hs-radio-group": HTMLHsRadioGroupElement;
         "hs-stack": HTMLHsStackElement;
@@ -163,6 +182,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface HsBox {
+    }
     interface HsBreadcrumb {
     }
     interface HsBreadcrumbItem {
@@ -201,6 +222,9 @@ declare namespace LocalJSX {
     }
     interface HsIcons {
     }
+    interface HsList {
+        "type"?: "unordered" | "ordered";
+    }
     interface HsRadioButton {
         "value"?: any;
     }
@@ -221,6 +245,7 @@ declare namespace LocalJSX {
         "type"?: "primary" | "success" | "warning" | "error";
     }
     interface IntrinsicElements {
+        "hs-box": HsBox;
         "hs-breadcrumb": HsBreadcrumb;
         "hs-breadcrumb-item": HsBreadcrumbItem;
         "hs-button": HsButton;
@@ -230,6 +255,7 @@ declare namespace LocalJSX {
         "hs-header": HsHeader;
         "hs-help-text": HsHelpText;
         "hs-icons": HsIcons;
+        "hs-list": HsList;
         "hs-radio-button": HsRadioButton;
         "hs-radio-group": HsRadioGroup;
         "hs-stack": HsStack;
@@ -240,6 +266,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "hs-box": LocalJSX.HsBox & JSXBase.HTMLAttributes<HTMLHsBoxElement>;
             "hs-breadcrumb": LocalJSX.HsBreadcrumb & JSXBase.HTMLAttributes<HTMLHsBreadcrumbElement>;
             "hs-breadcrumb-item": LocalJSX.HsBreadcrumbItem & JSXBase.HTMLAttributes<HTMLHsBreadcrumbItemElement>;
             "hs-button": LocalJSX.HsButton & JSXBase.HTMLAttributes<HTMLHsButtonElement>;
@@ -249,6 +276,7 @@ declare module "@stencil/core" {
             "hs-header": LocalJSX.HsHeader & JSXBase.HTMLAttributes<HTMLHsHeaderElement>;
             "hs-help-text": LocalJSX.HsHelpText & JSXBase.HTMLAttributes<HTMLHsHelpTextElement>;
             "hs-icons": LocalJSX.HsIcons & JSXBase.HTMLAttributes<HTMLHsIconsElement>;
+            "hs-list": LocalJSX.HsList & JSXBase.HTMLAttributes<HTMLHsListElement>;
             "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
             "hs-radio-group": LocalJSX.HsRadioGroup & JSXBase.HTMLAttributes<HTMLHsRadioGroupElement>;
             "hs-stack": LocalJSX.HsStack & JSXBase.HTMLAttributes<HTMLHsStackElement>;
