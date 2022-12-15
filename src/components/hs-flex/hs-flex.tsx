@@ -13,7 +13,7 @@ export class HsFlex {
   direction: "row" | "column" = "row";
 
   @Prop({ reflect: true, attribute: 'xAlign' })
-  xAlign: "center" | "start" | "end" = "center";
+  xAlign: "center" | "start" | "end" | "stretch" | "baseline" = "center";
 
   @Prop({ reflect: true, attribute: 'yAlign'})
   yAlign: "center" | "start" | "end"| "space-between" | "space-around" | "space-evenly" = "center";

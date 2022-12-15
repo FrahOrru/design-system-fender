@@ -18,7 +18,7 @@ export default {
       description: 'Flex direction',    // The description text displayed in the knobs table
     },
     xAlign: {
-      options: ["center", "start", "end"],        // Value presets
+      options: ["center", "start", "end", "stretch", "baseline" ],        // Value presets
       control: { type: 'select' },          // Knob type. It can be select, radio, etc
       description: 'alignment on x line',    // The description text displayed in the knobs table
     },

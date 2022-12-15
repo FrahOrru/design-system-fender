@@ -7,6 +7,17 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface HsBox {
+        "backgroundColor": string;
+        "margin": number;
+        "marginBottom": number;
+        "marginRight": number;
+        "marginTop": number;
+        "margingLeft": number;
+        "padding": number;
+        "paddingBottom": number;
+        "paddingLeft": number;
+        "paddingRight": number;
+        "paddingTop": number;
     }
     interface HsBreadcrumb {
     }
@@ -18,11 +29,14 @@ export namespace Components {
         "size": string;
         "variant": "primary" | "payment" | "pill" | "text";
     }
+    interface HsCallout {
+        "type": "info" | "warning" | "success";
+    }
     interface HsFlex {
         "direction": "row" | "column";
         "gap": number;
         "wrap": boolean;
-        "xAlign": "center" | "start" | "end";
+        "xAlign": "center" | "start" | "end" | "stretch" | "baseline";
         "yAlign": "center" | "start" | "end"| "space-between" | "space-around" | "space-evenly";
     }
     interface HsGrid {
@@ -97,6 +111,12 @@ declare global {
         prototype: HTMLHsButtonElement;
         new (): HTMLHsButtonElement;
     };
+    interface HTMLHsCalloutElement extends Components.HsCallout, HTMLStencilElement {
+    }
+    var HTMLHsCalloutElement: {
+        prototype: HTMLHsCalloutElement;
+        new (): HTMLHsCalloutElement;
+    };
     interface HTMLHsFlexElement extends Components.HsFlex, HTMLStencilElement {
     }
     var HTMLHsFlexElement: {
@@ -168,6 +188,7 @@ declare global {
         "hs-breadcrumb": HTMLHsBreadcrumbElement;
         "hs-breadcrumb-item": HTMLHsBreadcrumbItemElement;
         "hs-button": HTMLHsButtonElement;
+        "hs-callout": HTMLHsCalloutElement;
         "hs-flex": HTMLHsFlexElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
@@ -183,6 +204,17 @@ declare global {
 }
 declare namespace LocalJSX {
     interface HsBox {
+        "backgroundColor"?: string;
+        "margin"?: number;
+        "marginBottom"?: number;
+        "marginRight"?: number;
+        "marginTop"?: number;
+        "margingLeft"?: number;
+        "padding"?: number;
+        "paddingBottom"?: number;
+        "paddingLeft"?: number;
+        "paddingRight"?: number;
+        "paddingTop"?: number;
     }
     interface HsBreadcrumb {
     }
@@ -195,11 +227,14 @@ declare namespace LocalJSX {
         "size"?: string;
         "variant"?: "primary" | "payment" | "pill" | "text";
     }
+    interface HsCallout {
+        "type"?: "info" | "warning" | "success";
+    }
     interface HsFlex {
         "direction"?: "row" | "column";
         "gap"?: number;
         "wrap"?: boolean;
-        "xAlign"?: "center" | "start" | "end";
+        "xAlign"?: "center" | "start" | "end" | "stretch" | "baseline";
         "yAlign"?: "center" | "start" | "end"| "space-between" | "space-around" | "space-evenly";
     }
     interface HsGrid {
@@ -249,6 +284,7 @@ declare namespace LocalJSX {
         "hs-breadcrumb": HsBreadcrumb;
         "hs-breadcrumb-item": HsBreadcrumbItem;
         "hs-button": HsButton;
+        "hs-callout": HsCallout;
         "hs-flex": HsFlex;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
@@ -270,6 +306,7 @@ declare module "@stencil/core" {
             "hs-breadcrumb": LocalJSX.HsBreadcrumb & JSXBase.HTMLAttributes<HTMLHsBreadcrumbElement>;
             "hs-breadcrumb-item": LocalJSX.HsBreadcrumbItem & JSXBase.HTMLAttributes<HTMLHsBreadcrumbItemElement>;
             "hs-button": LocalJSX.HsButton & JSXBase.HTMLAttributes<HTMLHsButtonElement>;
+            "hs-callout": LocalJSX.HsCallout & JSXBase.HTMLAttributes<HTMLHsCalloutElement>;
             "hs-flex": LocalJSX.HsFlex & JSXBase.HTMLAttributes<HTMLHsFlexElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;

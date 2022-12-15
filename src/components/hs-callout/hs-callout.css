@@ -1,0 +1,28 @@
+div {
+  max-width: 320px;
+  max-height: 88px;
+  padding: 10px 40px;
+  margin: 10px;
+
+  border-radius: 4px;
+}
+
+div.info {
+  background-color: var(--hs-color-foundation-info-normal);
+  color: var(--hs-color-foundation-type-light);
+}
+
+div.warning {
+  background-color: var(--hs-color-foundation-warning-normal);
+  color: var(--hs-color-foundation-type-light);
+}
+
+div.success {
+  background-color: var(--hs-color-foundation-success-light);
+  color: var(--hs-color-foundation-success-normal);
+}
+
+img {
+  width: 20px;
+  margin: 0 0.5rem;
+}
