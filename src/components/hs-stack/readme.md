@@ -9,7 +9,7 @@
 
 | Property      | Attribute     | Description | Type                         | Default        |
 | ------------- | ------------- | ----------- | ---------------------------- | -------------- |
-| `gap`         | `gap`         |             | `"large" \| "small"`         | `'small'`      |
+| `gap`         | `gap`         |             | `number`                     | `0`            |
 | `orientation` | `orientation` |             | `"horizontal" \| "vertical"` | `"horizontal"` |
 
 

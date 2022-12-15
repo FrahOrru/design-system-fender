@@ -4,7 +4,7 @@
  */
 export default {
   // this creates a ‘Components’ folder and a 'Button' subfolder in Storybook's side menu
-  title: 'Components/Button',
+  title: 'Components/Form/Button',
   argTypes: {
     text: {
       description: 'Transcluded text to be injected in the component slot',

@@ -13,3 +13,23 @@
 .align-center {
   text-align: center;
 }
+
+h1 {
+  font-weight: var(--hs-typography-headers-h1-font-weight);
+}
+
+h2 {
+  font-weight: var(--hs-typography-headers-h2-font-weight);
+}
+
+h3 {
+  font-weight: var(--hs-typography-headers-h3-font-weight);
+}
+
+h4 {
+  font-weight: var(--hs-typography-headers-h4-font-weight);
+}
+
+h5 {
+  font-weight: var(--hs-typography-headers-h5-font-weight);
+}

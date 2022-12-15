@@ -28,7 +28,7 @@ export class HsTextInput {
 
   render() {
     return (
-      <hs-stack orientation='vertical' gap="small" >
+      <hs-stack orientation='vertical' gap={0.4}>
         
         {
           this.label ?

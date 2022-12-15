@@ -7,7 +7,7 @@
 export default {
   // This creates a ‘Components’ folder and a subfolder with the MyComponent menu item
   // of in Storybook's side menu. Replace 'MyComponent' by the generic component name.
-  title: 'Components/Header',
+  title: 'Components/Typography/Header',
   // Populate the `argTypes` property with knobs to customize the component.
   // Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls#annotation
   argTypes: {
@@ -25,7 +25,7 @@ export default {
       control: {
         type: 'number',
         min: 1,
-        max: 6,
+        max: 5,
       },
       description: 'The header level (h1-h6)',
     },
@@ -50,8 +50,32 @@ const Template = (args) => `
  * a proper 
  * Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls
  */
-export const ComponentStory = Template.bind({});
-ComponentStory.args = {
+export const HeaderH1 = Template.bind({});
+HeaderH1.args = {
   textAlign: 'left',
   level: 1,
+};
+
+export const HeaderH2 = Template.bind({});
+HeaderH2.args = {
+  textAlign: 'left',
+  level: 2,
+};
+
+export const HeaderH3 = Template.bind({});
+HeaderH3.args = {
+  textAlign: 'left',
+  level: 3,
+};
+
+export const HeaderH4 = Template.bind({});
+HeaderH4.args = {
+  textAlign: 'left',
+  level: 4,
+};
+
+export const HeaderH5 = Template.bind({});
+HeaderH5.args = {
+  textAlign: 'left',
+  level: 5,
 };

@@ -13,7 +13,7 @@ export class HsStack {
   orientation: "vertical" | "horizontal" = "horizontal";
 
   @Prop({reflect: true})
-  gap: 'large' | 'small' = 'small';
+  gap: number = 0;
 
   
   componentWillLoad() {
@@ -22,7 +22,7 @@ export class HsStack {
 
   stackStyle = css`
     flex-direction: ${this.orientation === 'horizontal' ? 'row' : 'column'};
-    gap: ${ this.gap === 'large' ? 20 : 5}px;
+    gap: ${ this.gap}rem;
   `;
 
   render() {

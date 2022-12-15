@@ -7,35 +7,20 @@
 export default {
   // This creates a ‘Components’ folder and a subfolder with the MyComponent menu item
   // of in Storybook's side menu. Replace 'MyComponent' by the generic component name.
-  title: 'Components/Layout/Flex',
+  title: 'Components/Layout/Stack',
   // Populate the `argTypes` property with knobs to customize the component.
   // Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls#annotation
   argTypes: {
     // This will create an `args.variant` binding for your component 
-    direction: {
-      options: ['row', 'column'],        // Value presets
+    orientation: {
+      options: ['vertical', 'horizontal'],        // Value presets
       control: { type: 'select' },          // Knob type. It can be select, radio, etc
-      description: 'Flex direction',    // The description text displayed in the knobs table
+      description: 'Stack Orientation',    // The description text displayed in the knobs table
     },
-    xAlign: {
-      options: ["center", "start", "end"],        // Value presets
-      control: { type: 'select' },          // Knob type. It can be select, radio, etc
-      description: 'alignment on x line',    // The description text displayed in the knobs table
-    },
-    yAlign: {
-      options: ["center", "start", "end", "space-between", "space-around", "space-evenly"],        // Value presets
-      control: { type: 'select' },          // Knob type. It can be select, radio, etc
-      description: 'Flex direction',    // The description text displayed in the knobs table
-    },
-    gap: {
+    gap: {      
       control: { type: 'number' },          // Knob type. It can be select, radio, etc
-      description: 'gap of one element to another',    // The description text displayed in the knobs table
-    },
-    wrap: {
-      options: ["true", "false"],        // Value presets
-      control: { type: 'boolean' },          // Knob type. It can be select, radio, etc
-      description: 'gap of one element to another',    // The description text displayed in the knobs table
-    },
+      description: 'Stack items gap', 
+    }
   }
 };
 
@@ -44,19 +29,11 @@ export default {
  * can later on customize with different values for its attribute properties and events
  */
 const Template = (args) => `
-  <hs-flex 
-    direction="${args.direction}"
-    xAlign="${args.xAlign}"
-    yAlign="${args.yAlign}"
-    gap="${args.gap}"
-    wrap="${args.wrap}"
-    >
-
+  <hs-stack orientation="${args.orientation}" gap="${args.gap}">
     <hs-button></hs-button>
     <hs-button></hs-button>
     <hs-button></hs-button>
-
-  </hs-flex>
+  </hs-stack>
 `;
 
 /**
@@ -67,13 +44,10 @@ const Template = (args) => `
  * a proper 
  * Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls
  */
-export const Flex = Template.bind({});
-Flex.args = {
+export const ComponentStory = Template.bind({});
+ComponentStory.args = {
   // Populate this object with key/value pairs, customizing the component atribute values or even its content. Eg:
   // content: 'Demo text',
-  direction: 'row',
-  xAlign: 'center',
-  yAlign: 'space-around',
   gap: 2,
-  wrap: false
+  orientation: 'horizontal'
 };
