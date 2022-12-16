@@ -32,6 +32,12 @@ export namespace Components {
     interface HsCallout {
         "type": "info" | "warning" | "success";
     }
+    interface HsCard {
+        "content": string;
+        "header": string;
+        "image": string;
+        "type": "medium" | "small";
+    }
     interface HsFlex {
         "direction": "row" | "column";
         "gap": number;
@@ -117,6 +123,12 @@ declare global {
         prototype: HTMLHsCalloutElement;
         new (): HTMLHsCalloutElement;
     };
+    interface HTMLHsCardElement extends Components.HsCard, HTMLStencilElement {
+    }
+    var HTMLHsCardElement: {
+        prototype: HTMLHsCardElement;
+        new (): HTMLHsCardElement;
+    };
     interface HTMLHsFlexElement extends Components.HsFlex, HTMLStencilElement {
     }
     var HTMLHsFlexElement: {
@@ -189,6 +201,7 @@ declare global {
         "hs-breadcrumb-item": HTMLHsBreadcrumbItemElement;
         "hs-button": HTMLHsButtonElement;
         "hs-callout": HTMLHsCalloutElement;
+        "hs-card": HTMLHsCardElement;
         "hs-flex": HTMLHsFlexElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
@@ -229,6 +242,12 @@ declare namespace LocalJSX {
     }
     interface HsCallout {
         "type"?: "info" | "warning" | "success";
+    }
+    interface HsCard {
+        "content"?: string;
+        "header"?: string;
+        "image"?: string;
+        "type"?: "medium" | "small";
     }
     interface HsFlex {
         "direction"?: "row" | "column";
@@ -285,6 +304,7 @@ declare namespace LocalJSX {
         "hs-breadcrumb-item": HsBreadcrumbItem;
         "hs-button": HsButton;
         "hs-callout": HsCallout;
+        "hs-card": HsCard;
         "hs-flex": HsFlex;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
@@ -307,6 +327,7 @@ declare module "@stencil/core" {
             "hs-breadcrumb-item": LocalJSX.HsBreadcrumbItem & JSXBase.HTMLAttributes<HTMLHsBreadcrumbItemElement>;
             "hs-button": LocalJSX.HsButton & JSXBase.HTMLAttributes<HTMLHsButtonElement>;
             "hs-callout": LocalJSX.HsCallout & JSXBase.HTMLAttributes<HTMLHsCalloutElement>;
+            "hs-card": LocalJSX.HsCard & JSXBase.HTMLAttributes<HTMLHsCardElement>;
             "hs-flex": LocalJSX.HsFlex & JSXBase.HTMLAttributes<HTMLHsFlexElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;

@@ -23,6 +23,19 @@ components in our Design System.
 | `textAlign` | `text-align` | Provides support for implementing horizontal alignment to the text contained in the header.                                | `"center" \| "left" \| "right"` | `'left'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [hs-card](../hs-card)
+
+### Graph
+```mermaid
+graph TD;
+  hs-card --> hs-header
+  style hs-header fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -104,8 +104,9 @@ export class HsHeader {
      * way to implement dynamic CSS based on component logic or external tokens.
      */
     const tagStyles = css`
-      text-size:${this.fontSize};  
+      font-size:${this.fontSize};  
       text-align: ${this.textAlign};
+      margin: 0!important;
     `;
  
     return (
