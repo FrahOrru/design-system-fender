@@ -25,7 +25,7 @@ export default {
     yAlign: {
       options: ["center", "start", "end", "space-between", "space-around", "space-evenly"],        // Value presets
       control: { type: 'select' },          // Knob type. It can be select, radio, etc
-      description: 'Flex direction',    // The description text displayed in the knobs table
+      description: 'alignment on y line',    // The description text displayed in the knobs table
     },
     gap: {
       control: { type: 'number' },          // Knob type. It can be select, radio, etc
@@ -34,7 +34,7 @@ export default {
     wrap: {
       options: ["true", "false"],        // Value presets
       control: { type: 'boolean' },          // Knob type. It can be select, radio, etc
-      description: 'gap of one element to another',    // The description text displayed in the knobs table
+      description: 'wrap value',    // The description text displayed in the knobs table
     },
   }
 };
