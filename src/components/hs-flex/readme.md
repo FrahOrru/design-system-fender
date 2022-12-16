@@ -21,11 +21,13 @@
 ### Used by
 
  - [hs-callout](../hs-callout)
+ - [hs-template](../hs-template)
 
 ### Graph
 ```mermaid
 graph TD;
   hs-callout --> hs-flex
+  hs-template --> hs-flex
   style hs-flex fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

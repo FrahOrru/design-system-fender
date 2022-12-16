@@ -52,9 +52,9 @@ const Template = (args) => `
     wrap="${args.wrap}"
     >
 
-    <hs-button></hs-button>
-    <hs-button></hs-button>
-    <hs-button></hs-button>
+    <hs-button>Button</hs-button>
+    <hs-button>Button</hs-button>
+    <hs-button>Button</hs-button>
 
   </hs-flex>
 `;

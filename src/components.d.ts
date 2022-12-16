@@ -22,7 +22,9 @@ export namespace Components {
     interface HsBreadcrumb {
     }
     interface HsBreadcrumbItem {
-        "src": any;
+        "href"?: string;
+        "isLastItem": boolean;
+        "name": string;
     }
     interface HsButton {
         "disabled": boolean;
@@ -78,6 +80,8 @@ export namespace Components {
     interface HsStack {
         "gap": number;
         "orientation": "vertical" | "horizontal";
+    }
+    interface HsTemplate {
     }
     interface HsTextInput {
         "disabled": boolean;
@@ -189,6 +193,12 @@ declare global {
         prototype: HTMLHsStackElement;
         new (): HTMLHsStackElement;
     };
+    interface HTMLHsTemplateElement extends Components.HsTemplate, HTMLStencilElement {
+    }
+    var HTMLHsTemplateElement: {
+        prototype: HTMLHsTemplateElement;
+        new (): HTMLHsTemplateElement;
+    };
     interface HTMLHsTextInputElement extends Components.HsTextInput, HTMLStencilElement {
     }
     var HTMLHsTextInputElement: {
@@ -212,6 +222,7 @@ declare global {
         "hs-radio-button": HTMLHsRadioButtonElement;
         "hs-radio-group": HTMLHsRadioGroupElement;
         "hs-stack": HTMLHsStackElement;
+        "hs-template": HTMLHsTemplateElement;
         "hs-text-input": HTMLHsTextInputElement;
     }
 }
@@ -232,7 +243,9 @@ declare namespace LocalJSX {
     interface HsBreadcrumb {
     }
     interface HsBreadcrumbItem {
-        "src"?: any;
+        "href"?: string;
+        "isLastItem"?: boolean;
+        "name"?: string;
     }
     interface HsButton {
         "disabled"?: boolean;
@@ -290,6 +303,8 @@ declare namespace LocalJSX {
         "gap"?: number;
         "orientation"?: "vertical" | "horizontal";
     }
+    interface HsTemplate {
+    }
     interface HsTextInput {
         "disabled"?: boolean;
         "helpText"?: boolean;
@@ -315,6 +330,7 @@ declare namespace LocalJSX {
         "hs-radio-button": HsRadioButton;
         "hs-radio-group": HsRadioGroup;
         "hs-stack": HsStack;
+        "hs-template": HsTemplate;
         "hs-text-input": HsTextInput;
     }
 }
@@ -338,6 +354,7 @@ declare module "@stencil/core" {
             "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
             "hs-radio-group": LocalJSX.HsRadioGroup & JSXBase.HTMLAttributes<HTMLHsRadioGroupElement>;
             "hs-stack": LocalJSX.HsStack & JSXBase.HTMLAttributes<HTMLHsStackElement>;
+            "hs-template": LocalJSX.HsTemplate & JSXBase.HTMLAttributes<HTMLHsTemplateElement>;
             "hs-text-input": LocalJSX.HsTextInput & JSXBase.HTMLAttributes<HTMLHsTextInputElement>;
         }
     }

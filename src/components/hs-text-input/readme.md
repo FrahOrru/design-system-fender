@@ -19,6 +19,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [hs-template](../hs-template)
+
 ### Depends on
 
 - [hs-stack](../hs-stack)
@@ -29,6 +33,7 @@
 graph TD;
   hs-text-input --> hs-stack
   hs-text-input --> hs-help-text
+  hs-template --> hs-text-input
   style hs-text-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

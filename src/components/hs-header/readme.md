@@ -28,11 +28,13 @@ components in our Design System.
 ### Used by
 
  - [hs-card](../hs-card)
+ - [hs-template](../hs-template)
 
 ### Graph
 ```mermaid
 graph TD;
   hs-card --> hs-header
+  hs-template --> hs-header
   style hs-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

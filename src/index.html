@@ -9,92 +9,57 @@
     <script nomodule src="/build/design-system.js"></script>
     <link rel="stylesheet" href="/build/design-system.css" />
   </head>
-  <body>
-      <!-- <hs-radio-group name="destinations" selected="3">
-          <hs-radio-button value="1">London</hs-radio-button>
-          <hs-radio-button value="2">Paris</hs-radio-button>
-          <hs-radio-button value="3">Madrid</hs-radio-button>
-          <hs-radio-button value="4">Rome</hs-radio-button>
-          <hs-radio-button value="5">New York</hs-radio-button>
-    </hs-radio-group> -->
-    <!-- <hs-stack orientation="vertical" gap="large">
-      <hs-button variant="pill" disabled="true">button</hs-button>
-      <hs-button variant="pill" disabled="true">button</hs-button>
-     </hs-stack> -->
 
-     <!-- <hs-header level="1" textAlign="left">Header</hs-header>
+  <style>
+    body {
+      height: 98vh;
+      width: 99%;
+      background: url('./assets/background.png');
+      background-repeat: no-repeat;
+      background-size: 65%;
+    }
+    .container {
+      position: absolute;
+      width: 40%;
+      right: 0%;
+      top: 20%;
+    }
+  </style>
+  <body>  
+<!-- 
+  <hs-breadcrumb>
+    <hs-flex direction="row">
+      <hs-breadcrumb-item name="breadcrumb"></hs-breadcrumb-item>
+      <hs-breadcrumb-item name="breadcrumb"></hs-breadcrumb-item>
+      <hs-breadcrumb-item name="breadcrumb" is-last-item="true"></hs-breadcrumb-item>
+    </hs-flex>
+  </hs-breadcrumb> -->
 
-     <hs-text-input
-     type="error"
-     help-text="true"
-     help-text-content="Please provide a valid email."
-     placeholder="Email"
-     label="Input label"
-     >
-     </hs-text-input> -->
+  <div class="container">
+    <hs-flex direction="column" gap="4">
+    <hs-header level="2" text-align="right">Log In Page</hs-header>
 
-     <!-- <hs-help-text>help text help text</hs-help-text> -->
-
-     <!-- <hs-flex 
-    direction="row"
-    xAlign="center"
-    yAlign="space-around"
-    gap="2"
-    wrap="false"
-    >
-    <hs-button></hs-button>
-    <hs-button></hs-button>
-    <hs-button></hs-button>
-
+    <hs-flex direction="column" gap="3">
+        <hs-text-input 
+        type="primary"
+        helpText="true"
+        helpTextContent="Please insert a valid email"
+        placeholder="Email"
+        label="Email"></hs-text-input>
+  
+        <hs-text-input 
+        type="primary"
+        placeholder="Password"
+        label="Password"></hs-text-input>
+    </hs-flex>
+  
+    
+    <hs-flex direction='row' yAlign='start' xAlign='center' gap="4" class="buttons">
+      <hs-button variant="text">Back</hs-button>
+      <hs-button>Log in</hs-button>
+    </hs-flex>
   </hs-flex>
-   -->
-  <!-- <hs-stack orientation="${args.orientation}" gap="${args.gap}">
-    <hs-button></hs-button>
-    <hs-button></hs-button>
-    <hs-button></hs-button>
-  </hs-stack> -->
-
-  <!-- <hs-list type="ordered">
-    <li>prova</li>
-    <li>prova</li>
-    <li>prova</li>
-    <li>prova</li>
-  </hs-list>
-
-  <hs-list type="unordered">
-    <li>prova</li>
-    <li>prova</li>
-    <li>prova</li>
-    <li>prova</li>
-  </hs-list> -->
-
-  <!-- <hs-callout type="info">
-    <div>
-      <hs-header level="4">Callout Title</hs-header>
-      <p>Callout Content</p>
-    </div>
-  </hs-callout>
-
-  <hs-callout type="warning">
-    <div>
-      <hs-header level="4">Callout Title</hs-header>
-      <p>Callout Content</p>
-    </div>
-  </hs-callout>
-
-  <hs-callout type="success">
-    <div>
-      <hs-header level="4">Callout Title</hs-header>
-      <p>Callout Content</p>
-    </div>
-  </hs-callout> -->
-
-  <!-- <hs-card
-    type="small"
-    background-image="https://images.pexels.com/photos/92069/pexels-photo-92069.jpeg"
-    header="Card header"
-    content="$9.50"
-  ></hs-card> -->
+  </div>
   
   </body>
   </html>

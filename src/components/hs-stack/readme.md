@@ -17,11 +17,15 @@
 
 ### Used by
 
+ - [hs-breadcrumb-item](../hs-breadcrumb)
+ - [hs-template](../hs-template)
  - [hs-text-input](../hs-text-input)
 
 ### Graph
 ```mermaid
 graph TD;
+  hs-breadcrumb-item --> hs-stack
+  hs-template --> hs-stack
   hs-text-input --> hs-stack
   style hs-stack fill:#f9f,stroke:#333,stroke-width:4px
 ```

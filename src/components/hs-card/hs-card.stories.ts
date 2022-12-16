@@ -7,7 +7,7 @@
 export default {
   // This creates a ‘Components’ folder and a subfolder with the MyComponent menu item
   // of in Storybook's side menu. Replace 'MyComponent' by the generic component name.
-  title: 'Components/Card',
+  title: 'Components/Display components/Card',
   // Populate the `argTypes` property with knobs to customize the component.
   // Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls#annotation
   argTypes: {
